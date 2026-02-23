@@ -51,6 +51,19 @@ const CURRICULUM_DATA = [
     ]
   },
   {
+    id: "month-4",
+    month: "4개월",
+    title: "심화 프로젝트 시작 및 해커톤",
+    desc: "고급 네트워크 및 클라우드 보안을 강화하며, 실시간 위협 탐지 및 대응 역량을 발전시킵니다.",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2940&auto=format&fit=crop",
+    subjects: [
+      { title: "심화 프로젝트", desc: "고급 네트워크 및 클라우드 보안을 강화하며, SIEM 활용과 암호학으로 설계된 보안 솔루션을 구현하여 실시간 위협 탐지 및 대응 역량을 발전시킵니다. 팀 단위로 협업하여 복합 보안 시스템을 설계하고 운영하며 심화된 실무 경험을 쌓습니다." },
+      { title: "해커톤", desc: "제한된 시간 내 팀별 아이디어 구상과 제품 설계를 진행하며 집중적인 협업을 통해 창의적 해결능력을 학습합니다." },
+      { title: "특강 3", desc: "기업 연사 또는 전문가를 초빙하여 사이버 보안 사례와 과정에 필요한 심화 주제를 다루는 특강을 진행합니다." },
+      { title: "취업 준비 역량 테스트 대비", desc: "매월 과정 별 역량 평가 및 피드백을 진행합니다. 최신 구직 동향 및 사례를 연구하며, 자기 PR을 위한 효과적인 취업 전략을 학습합니다." }
+    ]
+  },
+  {
     id: "month-5",
     month: "5개월",
     title: "실무 통합 프로젝트 시작",
@@ -182,7 +195,7 @@ export const CourseSection: React.FC = () => {
               <div 
                  ref={scrollContainerRef}
                  // 모바일에서 flex-row + 버튼 flex-1을 사용하여 모든 버튼을 한 줄에 균등 배치
-                 className={`flex ${isMobile ? 'flex-row w-full py-3 gap-1.5' : 'flex-col gap-2'}`}
+                 className={`flex ${isMobile ? 'flex-row w-full py-3 gap-1' : 'flex-col gap-2'}`}
               >
                 {CURRICULUM_DATA.map((item) => (
                   <button
@@ -192,7 +205,7 @@ export const CourseSection: React.FC = () => {
                     className={`
                       relative group flex items-center transition-all duration-300 border whitespace-nowrap
                       ${isMobile 
-                        ? 'flex-1 justify-center text-[11px] py-2.5 px-0 rounded-lg shadow-sm font-bold' // 모바일: 꽉 찬 너비, 작은 폰트, 중앙 정렬
+                        ? 'flex-1 justify-center text-[10px] py-2 px-0 rounded-lg shadow-sm font-bold' // 모바일: 꽉 찬 너비, 작은 폰트, 중앙 정렬
                         : 'w-full gap-3 px-4 py-3 rounded-xl text-left' // PC: 기존 스타일 유지
                       }
                       ${activeId === item.id 
